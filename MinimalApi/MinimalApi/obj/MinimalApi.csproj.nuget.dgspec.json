@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\LENOVO\\Desktop\\git repository for PluralSight Projects\\React-Asp.net-Project\\MinimalApi\\MinimalApi\\MinimalApi.csproj": {}
+    "C:\\Users\\LENOVO\\Desktop\\git repository for PluralSight Projects\\ReactDotnet\\MinimalApi\\MinimalApi\\MinimalApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\LENOVO\\Desktop\\git repository for PluralSight Projects\\React-Asp.net-Project\\MinimalApi\\MinimalApi\\MinimalApi.csproj": {
+    "C:\\Users\\LENOVO\\Desktop\\git repository for PluralSight Projects\\ReactDotnet\\MinimalApi\\MinimalApi\\MinimalApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LENOVO\\Desktop\\git repository for PluralSight Projects\\React-Asp.net-Project\\MinimalApi\\MinimalApi\\MinimalApi.csproj",
+        "projectUniqueName": "C:\\Users\\LENOVO\\Desktop\\git repository for PluralSight Projects\\ReactDotnet\\MinimalApi\\MinimalApi\\MinimalApi.csproj",
         "projectName": "MinimalApi",
-        "projectPath": "C:\\Users\\LENOVO\\Desktop\\git repository for PluralSight Projects\\React-Asp.net-Project\\MinimalApi\\MinimalApi\\MinimalApi.csproj",
+        "projectPath": "C:\\Users\\LENOVO\\Desktop\\git repository for PluralSight Projects\\ReactDotnet\\MinimalApi\\MinimalApi\\MinimalApi.csproj",
         "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LENOVO\\Desktop\\git repository for PluralSight Projects\\React-Asp.net-Project\\MinimalApi\\MinimalApi\\obj\\",
+        "outputPath": "C:\\Users\\LENOVO\\Desktop\\git repository for PluralSight Projects\\ReactDotnet\\MinimalApi\\MinimalApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,34 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.4.0, )"
