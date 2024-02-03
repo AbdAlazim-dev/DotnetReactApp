@@ -9,5 +9,5 @@ public interface IHouseRepository
 
     Task<List<HouseEntity>> GetAllHouses();
 
-    Task<HouseEntity> GetHouse(int id);
+    Task<HouseDetailsDto> GetHouse(int id);
 }

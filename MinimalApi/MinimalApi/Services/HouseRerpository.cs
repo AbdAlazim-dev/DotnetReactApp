@@ -21,11 +21,15 @@ namespace MinimalApi.Services
             return houses;
         }
 
-        public async Task<HouseEntity> GetHouse(int id)
+        public async Task<HouseDetailsDto> GetHouse(int id)
         {
-            var house = await _context.Houses.Where(h => h.Id == id).FirstOrDefaultAsync();
+            var house = await _context.Houses.SingleOrDefaultAsync(h => h.Id == id);
+            if(house == null)
+            {
+                return null;
+            }
 
-            return house;
+            return new HouseDetailsDto(house.Id, house.Address, house.Country, house.Description, house.Price, house.Photo);
         }
     }
 }

@@ -41,19 +41,27 @@ app.MapGet("/houses", async (
 {
     var houseEntities = await houseRepository.GetAllHouses();
 
+    //To test the loading in the frontend
+    Thread.Sleep(2000);
+
     return mapper.Map<List<HouseDto>>(houseEntities);
-});
+}).Produces<HouseDto[]>(StatusCodes.Status200OK);
 
 //get house by its id
-app.MapGet("/houses/{houseId}", async (
+app.MapGet("/houses/{houseId:int}", async (
     int houseId,
-    IHouseRepository houseRepository,
-    IMapper mapper) =>
+    IHouseRepository houseRepository) =>
 {
     var house = await houseRepository.GetHouse(houseId);
 
-    return mapper.Map<HouseDto>(house);
-});
+    if (house == null)
+    {
+        return Results.Problem($"there is no house with the id {houseId}", statusCode: StatusCodes.Status404NotFound);
+    }
+
+    Thread.Sleep(2000);
+    return Results.Ok(house);
+}).ProducesProblem(StatusCodes.Status404NotFound).Produces<HouseDetailsDto>(StatusCodes.Status200OK);
 app.UseHttpsRedirection();
 
 app.Run();

@@ -1,9 +1,15 @@
 
-import useFetchHouses from "../hooks/HouseHooks";
-
+import {useFetchHouses, useFetchHouseById} from "../hooks/HouseHooks";
+import { currencyFormatter } from "../config";
+import ApiStatus from "../types/ApiStatus";
 
 const HouseList = () => {
-    const houses = useFetchHouses();
+    const {data, status, isSuccess} = useFetchHouses();
+    let content;
+
+    if (!isSuccess) {
+        return <ApiStatus status={status} />
+    }
 
     return (
         <div>
@@ -19,11 +25,11 @@ const HouseList = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    {houses.map((house) => 
+                    {data && data.map((house) => 
                         <tr key={house.id}>
                             <td>{house.address}</td>
                             <td>{house.country}</td>
-                            <td>{house.price}</td>
+                            <td>{currencyFormatter.format(house.price)}</td>
                         </tr>
                     )}
                 </tbody>
