@@ -1,9 +1,11 @@
-﻿namespace MinimalApi.Modules;
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace MinimalApi.Modules;
 
 //Learning to use record on Dtos
 public record HouseDetailsDto(int Id,
-    string? Address,
-    string? Country,
+    [property : Required] string? Address,
+    [property: Required] string? Country,
     string? Description,
     decimal Price,
     string? Photo);

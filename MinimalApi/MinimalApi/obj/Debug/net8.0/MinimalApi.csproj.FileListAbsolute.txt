@@ -160,3 +160,4 @@ C:\Users\LENOVO\Desktop\git repository for PluralSight Projects\ReactDotnet\Mini
 C:\Users\LENOVO\Desktop\git repository for PluralSight Projects\ReactDotnet\MinimalApi\MinimalApi\obj\Debug\net8.0\ref\MinimalApi.dll
 C:\Users\LENOVO\Desktop\git repository for PluralSight Projects\ReactDotnet\MinimalApi\MinimalApi\bin\Debug\net8.0\AutoMapper.dll
 C:\Users\LENOVO\Desktop\git repository for PluralSight Projects\ReactDotnet\MinimalApi\MinimalApi\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\LENOVO\Desktop\git repository for PluralSight Projects\ReactDotnet\MinimalApi\MinimalApi\bin\Debug\net8.0\MiniValidation.dll

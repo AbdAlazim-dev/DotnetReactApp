@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using MinimalApi.Data;
 using MinimalApi.Modules;
 using MinimalApi.Services;
+using MiniValidation;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -66,22 +67,31 @@ app.MapGet("/houses/{houseId:int}", async (
 
 
 //Create new house by passing the house values on the request body
-app.MapPost("/house", async (
+app.MapPost("/houses", async (
     IHouseRepository houaseRepository,
     [FromBody] HouseForCreationDto houseToAdd
     ) =>
 {
+    if(!MiniValidator.TryValidate(houseToAdd, out var errors))
+    {
+        return Results.ValidationProblem(errors);
+    }
     var newHouse = await houaseRepository.Add(houseToAdd);
 
-    return Results.Created($"house/{newHouse.Id}", newHouse);
+    return Results.Created($"houses/{newHouse.Id}", newHouse);
 
-}).Produces<HouseDetailsDto>(StatusCodes.Status201Created);
+}).ProducesValidationProblem(StatusCodes.Status400BadRequest)
+.Produces<HouseDetailsDto>(StatusCodes.Status201Created);
 
 //Update a house using its id
-app.MapPut("/house", async (
+app.MapPut("/houses", async (
     IHouseRepository houseRepository,
     [FromBody] HouseDetailsDto house) =>
 {
+    if (!MiniValidator.TryValidate(house, out var errors))
+    {
+        return Results.ValidationProblem(errors);
+    }
     var houseToUpdate = houseRepository.GetHouse(house.Id);
 
     if (houseToUpdate == null)
@@ -90,10 +100,10 @@ app.MapPut("/house", async (
     var updatedHouse = await houseRepository.Update(house);
 
     return Results.Ok(updatedHouse);
-}).ProducesProblem(StatusCodes.Status404NotFound).Produces<HouseDetailsDto>(StatusCodes.Status200OK);
+}).ProducesValidationProblem(StatusCodes.Status400BadRequest).ProducesProblem(StatusCodes.Status404NotFound).Produces<HouseDetailsDto>(StatusCodes.Status200OK);
 
 //Delete a house by its id
-app.MapDelete("house/{houseId}", async (
+app.MapDelete("houses/{houseId}", async (
     IHouseRepository houseRepository,
     int houseId) =>
 {

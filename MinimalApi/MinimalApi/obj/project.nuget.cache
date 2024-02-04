@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "buDVbYMTXZeCOjiOdiImMsx3AcHGAAvkBt8WeZGLWw6PBD7PFGe5k5xc4hHCUKEJ/kEje06MAAVvnvAuG+Yrxg==",
+  "dgSpecHash": "IYOZKb9KwaR19Ytx2QbNSPDWR/bsgL+E7dv7z0FY4V3c15jTK2Kq8VzQizoR8aVDczRihy4DbnPnc/49op+jSg==",
   "success": true,
   "projectFilePath": "C:\\Users\\LENOVO\\Desktop\\git repository for PluralSight Projects\\ReactDotnet\\MinimalApi\\MinimalApi\\MinimalApi.csproj",
   "expectedPackageFiles": [
@@ -35,6 +35,7 @@
     "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.extensions.options\\8.0.0\\microsoft.extensions.options.8.0.0.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\LENOVO\\.nuget\\packages\\minivalidation\\0.9.0\\minivalidation.0.9.0.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.1.6\\sqlitepclraw.bundle_e_sqlite3.2.1.6.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\sqlitepclraw.core\\2.1.6\\sqlitepclraw.core.2.1.6.nupkg.sha512",
