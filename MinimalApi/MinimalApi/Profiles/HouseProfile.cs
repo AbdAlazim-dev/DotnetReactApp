@@ -10,5 +10,8 @@ public class HouseProfile : Profile
     {
         CreateMap<HouseEntity, HouseDto>();
         CreateMap<HouseDto, HouseEntity>();
+        CreateMap<HouseEntity, HouseDetailsDto>();
+        CreateMap<HouseDetailsDto, HouseEntity>();
+        CreateMap<HouseForCreationDto, HouseEntity>();
     }
 }
